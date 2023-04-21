@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UniFace - Advanced Facial Recognition AI for Secure Event Access Control</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #fde4e4, #C2DFFF, #A4C4FF);
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+        width: 1470px;
+        font-family: 'Poppins' , sans-serif;
+    }
+    header {
+        position: fixed; /* fix the header position */
+        top: 0; /* set the top position */
+        left: 0; /* set the left position */
+        right: 0; /* set the right position */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: lightblue;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        padding-top: 1px;
+        padding-bottom: 1px;
+        transition: opacity 0.5s; /* add a transition effect */
+        opacity: 1; /* set initial opacity to fully visible */
+        
+    }
+    
+    header img {
+        width: 100px;
+        margin-right: 20px;
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header li {
+        margin: 0 10px;
+    }
+    
+    header a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    
+    header a:not(.login-link):hover {
+        outline: 2px solid #2196F3;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 5px;
+    }
+    
+    header a:not(.login-link):hover span {
+        outline-color: #1E88E5;
+    }
+    
+        
+    
+    .login-btn {
+        background-color: #2196F3;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .login-btn:hover {
+        background-color: #0D47A1;
+    }
+    .images-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+        
+    .image {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        transition: transform 0.3s;
+    }
+        
+    .image:hover {
+        transform: scale(1.1);
+    }
+    .h4{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .h1{
+        text-align:center;
+        font-size: 50px;
+        margin-top: 350px;
+    }
+    .p{
+        font-size: 30px;
+        text-align: center;
+    }
+    .fade-text {
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+    hr{
+        width:650px;
+       color:black;
+        
+    }
+</style>
+</head>
+<body>
+<header>
+    <img src="Images/Logo.png" alt="Logo">
+    <ul>
+        <li><a href="Home.html"><span>Home</span></a></li>
+        <li><a href="about_me.html"><span>About Us</span></a></li>
+        <li><a href="impact.html"><span>Impact</span></a></li>
+        <li><a href="demo.html"><span>Demo</span></a></li>
+        <li><a href="team.html"><span>Meet The Team</span></a></li>
+        <li><a href="admin.html"><span>Admin</span></a></li>
+        <li><a href="try.html"><span>Try it Yourself!</span></a></li>
+        </ul>
+        
+        <a href="login.html" class="login-link"><button class="login-btn">Login</button></a>
+
+        </header>
+        <div class="fade-text">
+            <h1 class="h1">UniFace </h1>
+            <h4 class="h4">Advanced Facial Recognition AI for Secure Event Access Control</h4>
+            <hr >
+            <p class="p">Are You Who You Say You Are?</p>
+        </div>
+        
+        <script>
+            var prevScrollpos = window.pageYOffset; // get the initial scroll position
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) { // if scrolling up
+                document.querySelector("header").style.opacity = "1"; // set opacity back to fully visible
+                } else { // if scrolling down
+                document.querySelector("header").style.opacity = "0"; // set opacity to 0 to fade out
+                }
+                prevScrollpos = currentScrollPos;
+                // show the header when the user scrolls all the way up to the top of the page
+                if (currentScrollPos === 0) {
+                document.querySelector("header").style.opacity = "1";
+                }
+            }
+            window.onscroll = function() {
+                // Calculate the scroll percentage
+                var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+                // Update the opacity of the fade-text container
+                document.querySelector('.fade-text').style.opacity = 1 - scrollPercentage;
+            };
+            </script>
+            
+    </body>
+    </html>
